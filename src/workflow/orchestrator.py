@@ -153,6 +153,13 @@ class OrchestratorWorkflow(Workflow):
             elif "Medisave_Workflow" in key_error_str:
                 print("Medisave Workflow selected")
                 ctx.send_event(MedisaveEvent(query=ev.query))
+            else:
+                print("Key not found. Using Statement Workflow as default.")
+                ctx.send_event(StatementEvent(query=ev.query))
+        except Exception as e:
+            print(f"Error: {e}")
+            print("Using Statement Workflow as default.")
+            ctx.send_event(StatementEvent(query=ev.query))
 
     @step
     async def annex_rag(

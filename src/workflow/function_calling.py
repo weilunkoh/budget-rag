@@ -171,7 +171,7 @@ async def run_standalone():
 
 
 if __name__ == "__main__":
-    # Run standalone module for ingesting data
+    # Run standalone module for testing querying on workflow
     # python -m src.workflow.function_calling
 
     import asyncio
