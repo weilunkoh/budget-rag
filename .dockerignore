@@ -1,0 +1,17 @@
+.git/*
+data/booklet/*
+data/budget_statement_and_speech/*
+data/budget_statement_annex/*
+deployment/*
+notebooks/*
+reference/*
+.env
+.env-template
+.gitignore
+conda-env.yml
+docker_build.bat 
+docker_run.bat 
+docker_stop.bat
+Explanation.pdf
+README.md
+Streaming_Text_Effect_Video.gif

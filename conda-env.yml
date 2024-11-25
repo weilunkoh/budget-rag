@@ -1,0 +1,32 @@
+name: budget-rag
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.11.10
+  - pip=24.3.1
+  - pip:
+    - --extra-index-url https://download.pytorch.org/whl/cpu
+    - torch==2.5.1+cpu
+    - llama-index==0.12.1
+    - llama-index-llms-openai==0.3.1
+    - pydantic==2.9.2
+    - streamlit==1.40.1
+
+    # For local development
+    - llama-index-utils-workflow==0.3.0
+    - tiktoken==0.8.0
+    - ipywidgets==8.1.5
+    - ipykernel==6.29.5
+
+    # For deployment of REST API
+    # - flask==3.1.0
+    # - gunicorn
+
+    # For a deployment grade vector storeb that can run on-premise
+    - llama-index-vector-stores-chroma==0.4.0
+
+    # For LLMs and embedding models that can run on-premise
+    - llama-index-embeddings-huggingface==0.4.0
+    - llama-index-postprocessor-flag-embedding-reranker==0.3.0
+    - git+https://github.com/FlagOpen/FlagEmbedding.git
